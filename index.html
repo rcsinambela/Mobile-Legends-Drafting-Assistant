@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Legends Drafting Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mobile Legends Drafting Assistant</h1>
+
+        <!-- Banning Section -->
+        <section class="section" id="ban-section">
+            <h2>Banning Section</h2>
+            <div class="ban-list" id="ban-recommendations"></div>
+            <div class="input-group">
+                <input type="text" id="ban-hero" placeholder="Hero Name">
+                <button onclick="banHero(true)" class="button">Ban for Team</button>
+                <button onclick="banHero(false)" class="button button-secondary">Ban for Enemy</button>
+            </div>
+            <div class="current-bans">
+                <h3>Current Bans</h3>
+                <p><strong>Team Bans:</strong> <span id="team-bans"></span></p>
+                <p><strong>Enemy Bans:</strong> <span id="enemy-bans"></span></p>
+            </div>
+        </section>
+
+        <!-- Picking Section -->
+        <section class="section" id="pick-section">
+            <h2>Picking Section</h2>
+            <div class="pick-list" id="pick-recommendations"></div>
+            <div class="input-group">
+                <input type="text" id="pick-hero" placeholder="Hero Name">
+                <button onclick="pickHero(true)" class="button">Pick for Team</button>
+                <button onclick="pickHero(false)" class="button button-secondary">Pick for Enemy</button>
+            </div>
+            <div class="current-picks">
+                <h3>Current Picks</h3>
+                <p><strong>Team Picks:</strong> <span id="team-picks"></span></p>
+                <p><strong>Enemy Picks:</strong> <span id="enemy-picks"></span></p>
+            </div>
+        </section>
+
+        <!-- Counter Section -->
+        <section class="section">
+            <h2>Hero Counters</h2>
+            <div class="input-group">
+                <input type="text" id="counter-hero" placeholder="Hero Name">
+                <button onclick="getCounter()" class="button">Get Counter</button>
+            </div>
+            <div id="counter-result" class="counter-result"></div>
+        </section>
+
+        <!-- Hero Strategy Section -->
+        <div class="section" id="hero-strategy">
+            <h2>Hero Strategy</h2>
+            <div id="hero-strategy-content"></div>
+        </div>
+
+        <div class="section" id="reset-section">
+            <button onclick="resetDraft()" class="button button-reset">Reset Draft</button>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
